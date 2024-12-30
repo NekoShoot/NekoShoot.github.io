@@ -1,44 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NekoShoot's Meowtroduction</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Introduction</title>
     <style>
-        h1 {
-            display: inline;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
         }
+
+        .profile-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, #f0f7ff 0%, #fff1f6 100%);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .profile-content {
+            display: flex;
+            gap: 24px;
+        }
+
+        .character-image {
+            width: 260px;
+            height: 560px;
+            background: #eee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-section {
+            flex: 1;
+        }
+
+        .character-name {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .server-icon {
+            width: 24px;
+            height: 24px;
+            background: #ddd;
+            border-radius: 4px;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .character-level {
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .additional-info {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .progress-bars {
+            display: flex;
+            height: 4px;
+            margin-top: 16px;
+        }
+
+        .progress-bar {
+            flex: 1;
+        }
+
+        .bar-blue { background: #3b82f6; }
+        .bar-purple { background: #8b5cf6; }
+        .bar-yellow { background: #eab308; }
+        .bar-green { background: #10b981; }
     </style>
 </head>
 <body>
-    <h1>NekoShoot</h1>
-    <h2 style="display: inline;">SSAFY12 - Seoul07</h2>
-    <h3>Language</h3>
-    <ol>
-        <li>Korean:
-            <ul>Mother Language</ul>
-        </li>
-        <li>English:
-            <ul>Second Language</ul>
-        </li>
-        <li>Japanese:
-            <ul>Third Language</ul>
-        </li>
-        <p></p>
-        <li>JavaScript:
-            <ul>First Programming Language</ul>
-        </li>
-        <li>Java:
-            <ul>Third Programming Language</ul>
-        </li>
-        <li>Python:
-            <ul>Second Programming Language</ul>
-        </li>
-    </ol> 
-    <a href="https://github.com/NekoShoot">
-        <img src="./assets/img/european-shorthair-8601492_640.jpg" alt="lying lying cat">      
-    </a>    
+    <div class="profile-card">
+        <div class="date">이 자기소개는 Claude Sonnet 3.5와 함께 html로 제작되었습니다</div>
+        
+        <div class="profile-content">
+            <div class="character-image">
+                <img src="./my-image.png" alt="my-image" style="height: 100%; width: 100%;">
+            </div>
+            
+            <div class="info-section">
+                <div class="character-name">
+                    <div class="server-icon">
+                        <img src="./java.png" alt="java-image" style="width: 100%; height: 100%;">
+                    </div>
+                    <h1 class="name">조홍균</h1>
+                </div>
+                
+                <div class="character-level">Java 비전공 | 국제학부</div>
+                <br>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">BE Skills</span>
+                        <span class="stat-value">Java</span>
+                        <span class="stat-value">Spring</span>
+                        <span class="stat-value">Node.js</span>
+
+                        <br>
+                        <span class="stat-label">FE Skills</span>
+                        <span class="stat-value">JavaScript</span>
+                        <span class="stat-value">Vue.js</span>
+                        <span class="stat-value">React</span><span>(in progress)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Language Skills</span>
+                        <span class="stat-value">Korean</span>
+                        <span class="stat-value">English</span>
+                        <span class="stat-value">Japanese</span>
+
+                        <br>
+                        <span class="stat-label">Working Skills</span>
+                        <span class="stat-value">Jira</span>
+                        <span class="stat-value">Git</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Favorites</span>
+                        <span class="stat-value">Coffee!</span>
+                        <span class="stat-value">Cookie!</span>
+                        <span class="stat-value">Cute Things!</span>
+
+                        <br>
+                        <span class="stat-label">Dream</span>
+                        <span class="stat-value">내 집 마련</span>
+                        <span class="stat-value">냥이 집사</span>                        
+                    </div>
+                </div>                                
+                <div class="stat-label">Additional Information</div>
+                <div class="additional-info">
+                    ★이달의 동료, 메모 담당, 발표 담당, 힐링 토템 제공
+                </div>
+
+                <br>
+                <div>
+                    <span>★ 1학기 땐 BE를 담당했지만, 2학기에는 즐겁게 만들어 갈 수 있으면 파트는 상관없습니다!</span>
+                    <br>
+                    <span>★ 연락 하나는 엄청 빠르게 받습니다!!</span>
+                    <br>
+                    <span>★ 우수상 같은 결과 보다는 만드는 과정이 즐거운 사람들이 모였으면 좋겠습니다!!!</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-bars">
+            <div class="progress-bar bar-blue"></div>
+            <div class="progress-bar bar-purple"></div>
+            <div class="progress-bar bar-yellow"></div>
+            <div class="progress-bar bar-green"></div>
+        </div>
+    </div>
 </body>
 </html>
